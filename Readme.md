@@ -1,6 +1,7 @@
 # Webáruház
 
 ## Specifikáció:
+A webáruházat ajánlom katonai hagyományőrzők figyelmébe ugyanis a(z) egyenruhák/felszerelésektől a hadijátékokon használatos fegyverekig minden megtalálható.
 
 ### ADMIN FELÜLET 
 A táblázat fejlécére kattintva tudjunk rendezni növekvő, illetve csökkenő sorrendbe az adatokat
@@ -15,18 +16,22 @@ A kiemelt termék mellett megjelenik egy bal és egy jobb léptető gomb, amivel
 
 
 ## Metódusok
-1. **htmlOszeallit(lista)->txt** | összállatja a táblázat htm szerkezetét egy szöveges változóba
+### megjelenites.js:
+1. **termekOsszeallit(lista)->txt** | Összállatja a termékek kártyáit (BS5 használatával) egy szöveges változóba.
 
-2.  **megjelenit(txt)** -  megjelnítette egy adott html elemben a paraméterénben kapott szöveget. 
+2. **kosarOsszeallit(lista)->txt** | Összállatja a kosár táblázat szerkezetét egy szöveges változóba.
 
-3. **rendez(lista, irany) -> rendezettLista** | a paraméterében kapott listát név szerint megrendezi; a függvény akkor fut le, ha a táblázat név fejlécére kattintunk. 
+3. **megjelenit(txt)** -  Megjelnítette egy adott html elemben a paraméterénben kapott szöveget. 
 
-4. **adatHozzaadas(lista) -> kibovitettLista** |  Összegyűjti az űrlapról az adatokat és összeállít belőlök egy objektumot, majd azt beleteszi a listába.; a függvény akkor fut le, ha rákattintunk a Hozzáad gombra. 
+### w.i.p:
+4. **rendez(lista, irany) -> rendezettLista** | A paraméterében kapott listát név szerint megrendezi; a függvény akkor fut le, ha a táblázat név fejlécére kattintunk. 
 
-5. **torol(lista,id )->tLista** | kitorli a listából az adott id-jű elemet.
-Akkor fog lefutni, ha sor melletti torol gombra kattintunk. 
+5. **adatHozzaadas(lista) -> kibovitettLista** |  Összegyűjti az űrlapról az adatokat és összeállít belőlök egy objektumot, majd azt beleteszi a listába.; a függvény akkor fut le, ha rákattintunk a Hozzáad gombra. 
 
-6. **szures(lista, keresoSzoveg) -> szurtLista** | a keresőmezőbe beírt szöveget keresi a lista objektumainak név mezőjében. mindez akkor fut le, ha beírunk valamit a keresőmezőbe. 
+6. **torol(lista,id )->tLista** | Kitörli a listából az adott id-jű elemet.
+Akkor fog lefutni, ha sor melletti töröl gombra kattintunk. 
+
+7. **szures(lista, keresoSzoveg) -> szurtLista** | a keresőmezőbe beírt szöveget keresi a lista objektumainak név mezőjében. mindez akkor fut le, ha beírunk valamit a keresőmezőbe. 
 
 kosarLista  tartalmába kerül gombnyomás után
 megjelenik a felületen
