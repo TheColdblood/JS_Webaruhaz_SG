@@ -4,12 +4,12 @@ export function termekOsszeallit(lista) {
     txt += `
     <div class='card col-lg-4'>
       <div class="card-header">
-        <h4 class="float-start">${lista[index].nev}</h4>
+        <h4>${lista[index].nev}</h4>
       </div>
 
       <div class="card-body">
         <img class="card-img-top img-thumbnail" src="${lista[index].kep}" alt="${lista[index].nev}" >
-        <p class="float-start">${lista[index].leiras}</p>
+        <p class="card-text">${lista[index].leiras}</p>
       </div>
 
       <div class="card-footer">
