@@ -11,4 +11,10 @@ export const termekekLISTA=[
         leiras:"leiras2",
         ar: 2000,
     },
+    {
+        nev:"nev3",
+        kep:"kep3",
+        leiras:"leiras3",
+        ar: 3000,
+    },
 ]
