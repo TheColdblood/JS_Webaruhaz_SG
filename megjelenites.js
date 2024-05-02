@@ -1,8 +1,8 @@
 export function termekOsszeallit(lista) {
   let txt = "";
-  for (let index = 0; index < lista.length; index++){
+  for (let index = 0; index < lista.length; index++) {
     txt += `
-    <div class='card col-lg-4'>
+    <div class='card col-lg-3'>
       <div class="card-header">
         <h4>${lista[index].nev}</h4>
       </div>
@@ -14,8 +14,11 @@ export function termekOsszeallit(lista) {
 
       <div class="card-footer">
         <p class="float-start">${lista[index].ar}</p>
+        <div>
+          <button class="gomb float-end" id="${index}">Kosárba</button>
+        </div>
       </div>
-    </div>`
+    </div>`;
   }
   return txt;
 }
@@ -26,7 +29,7 @@ export function htmlOsszeallit(lista) {
   txt +=
     "<thead><tr><th>Név</th><th>Kor</th><th>Nem</th><th></th></tr></thead>";
   txt += "<tbody>";
-  lista.forEach((elem,index) => {
+  lista.forEach((elem, index) => {
     txt += `<tr>`;
 
     for (const kulcs in elem) {
