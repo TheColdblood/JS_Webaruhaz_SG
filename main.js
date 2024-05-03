@@ -28,6 +28,8 @@ function kosarEsemeny() {
     kosarInit()
   })
 }
+
+
 /* Törlés */
 function torol(lista,id){
   lista.splice(id,1);
