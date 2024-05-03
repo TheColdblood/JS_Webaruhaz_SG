@@ -3,26 +3,29 @@ import { megjelenit, termekOsszeallit, kosarOsszeallit } from "./megjelenites.js
 termekOsszeallit(termekekLISTA);
 
 const oldalELEM = $(".adatok");
-console.log(termekOsszeallit(termekekLISTA));
 oldalELEM.html(termekOsszeallit(termekekLISTA));
 
 init(termekekLISTA);
 
 /* Kosár: */
 const KOSAR = []
-const kosarba = $("#gomb")
+const kosarba = $("#kosarHely")
 
 function init(lista) {
   kosarEsemeny(lista);
+}
+
+function kosarInit(lista){
+  kosarba.html(kosarOsszeallit(KOSAR))
   torolEsemeny();
 }
 
 function kosarEsemeny() {
-  const gombElem = $(".gomb")
+  const gombElem = $(".kosarbaGomb")
   gombElem.on("click",function (event) {
-      const ID = event.target.id 
-      KOSAR.push(termekekLISTA[ID])
-      kosarba.html(kosarOsszeallit(KOSAR))
+    const ID = event.target.id 
+    KOSAR.push(termekekLISTA[ID])
+    kosarInit()
   })
 }
 /* Törlés */
@@ -33,9 +36,11 @@ function torol(lista,id){
 
 function torolEsemeny(){
   const torolGomb=$(".torol")
+  console.log(torolGomb)
   torolGomb.on("click",function (event) {
     let id = event.target.id;
-    const LISTA = torol(termekekLISTA,id);
-    init(LISTA);
+    console.log(id)
+    const LISTA = torol(KOSAR,id);
+    kosarInit()
   });
 }

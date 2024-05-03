@@ -15,7 +15,7 @@ export function termekOsszeallit(lista) {
       <div class="card-footer">
         <p class="float-start">${lista[index].ar}</p>
         <div>
-          <button class="gomb float-end" id="${index}">Kosárba</button>
+          <button class="kosarbaGomb float-end" id="${index}">Kosárba</button>
         </div>
       </div>
     </div>`;
