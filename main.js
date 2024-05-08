@@ -1,6 +1,6 @@
 import { termekekLISTA } from "./termekek.js";
 import { termekOsszeallit, kosarOsszeallit } from "./megjelenites.js";
-import { nevRendez, arRendez } from "./rendezes.js";
+import { nevRendez, arRendez} from "./rendezes.js";
 termekOsszeallit(termekekLISTA);
 
 const termekElem = $("#termekek");
@@ -66,7 +66,7 @@ function rendezEsemeny(lista) {
       irany *= -1;
   });
 
-  arElem.on("click", function () {
+ arElem.on("click", function () {
       const rLista = arRendez(lista.slice(), irany);
       termekElem.html(termekOsszeallit(rLista));
       irany *= -1;
