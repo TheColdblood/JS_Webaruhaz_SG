@@ -16,6 +16,21 @@ A kiemelt termék mellett megjelenik egy bal és egy jobb léptető gomb, amivel
 
 
 ## Metódusok
+
+### main.js:
+1. **init(lista)** | Meghívja a rendezEsemeny(lista) és kosarEsemeny(lista) metódusokat.
+
+2. **kosarInit()** | Megjeleníti a kosarat és meghívja a torolEsemeny() metódust.
+
+3. **kosarEsemeny()** | A "Kosárba" gombra eseményt tesz amely aktiválódás után hozzáfűzi a termékeket a KOSAR listába.
+
+4. **torol(lista,id) -> lista** | Feldarabolja a paraméterben megadott listát.
+
+5. **torolEsemeny()** | A "🗑️" gombra eseményt tesz amely aktiválódás után ledarabolja a termékeket a KOSAR listából.
+
+6. **rendezEsemeny(lista)** | A "Rendezési szempontok" menün belül lévő "Név" és "Ár" gombokra eseményt tesz amely aktiválódás után név illetve ár szerint rendezi a termékeket.
+
+
 ### megjelenites.js:
 1. **termekOsszeallit(lista)->txt** | Összállatja a termékek kártyáit (BS5 használatával) egy szöveges változóba.
 
@@ -23,17 +38,14 @@ A kiemelt termék mellett megjelenik egy bal és egy jobb léptető gomb, amivel
 
 3. **megjelenit(txt)** -  Megjelnítette egy adott html elemben a paraméterénben kapott szöveget. 
 
+
+### rendezes.js:
+1. **nevRendez(lista, irany) -> lista** | A listában található elemeket név szerint rendezi növekvő és csökkenő irányban.
+
+2. **arRendez(lista, irany) -> lista** | A listában található elemeket ár szerint rendezi növekvő és csökkenő irányban.
+
+
 ### w.i.p:
-4. **rendez(lista, irany) -> rendezettLista** | A paraméterében kapott listát név szerint megrendezi; a függvény akkor fut le, ha a táblázat név fejlécére kattintunk. 
+1. **adatHozzaadas(lista) -> kibovitettLista** |  Összegyűjti az űrlapról az adatokat és összeállít belőlök egy objektumot, majd azt beleteszi a listába.; a függvény akkor fut le, ha rákattintunk a Hozzáad gombra. 
 
-5. **adatHozzaadas(lista) -> kibovitettLista** |  Összegyűjti az űrlapról az adatokat és összeállít belőlök egy objektumot, majd azt beleteszi a listába.; a függvény akkor fut le, ha rákattintunk a Hozzáad gombra. 
-
-6. **torol(lista,id )->tLista** | Kitörli a listából az adott id-jű elemet.
-Akkor fog lefutni, ha sor melletti töröl gombra kattintunk. 
-
-7. **szures(lista, keresoSzoveg) -> szurtLista** | a keresőmezőbe beírt szöveget keresi a lista objektumainak név mezőjében. mindez akkor fut le, ha beírunk valamit a keresőmezőbe. 
-
-kosarLista  tartalmába kerül gombnyomás után
-megjelenik a felületen
-
-kosarbaTesz(kosarLista, termekLista, id) -> 
+2. **szures(lista, keresoSzoveg) -> szurtLista** | a keresőmezőbe beírt szöveget keresi a lista objektumainak név mezőjében. mindez akkor fut le, ha beírunk valamit a keresőmezőbe. 
